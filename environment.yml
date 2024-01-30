@@ -1,27 +1,35 @@
 name: torch38
 channels:
-  - defaults
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+  - http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+   #- defaults
 dependencies:
-  - _libgcc_mutex=0.1=main
-  - _openmp_mutex=5.1=1_gnu
-  - ca-certificates=2023.08.22=h06a4308_0
-  - ld_impl_linux-64=2.38=h1181459_1
-  - libffi=3.4.4=h6a678d5_0
-  - libgcc-ng=11.2.0=h1234567_1
-  - libgomp=11.2.0=h1234567_1
-  - libstdcxx-ng=11.2.0=h1234567_1
-  - ncurses=6.4=h6a678d5_0
-  - openssl=3.0.12=h7f8727e_0
-  - pip=23.3=py38h06a4308_0
-  - python=3.8.18=h955ad1f_0
-  - readline=8.2=h5eee18b_0
-  - setuptools=68.0.0=py38h06a4308_0
-  - sqlite=3.41.2=h5eee18b_0
-  - tk=8.6.12=h1ccaba5_0
-  - wheel=0.41.2=py38h06a4308_0
-  - xz=5.4.2=h5eee18b_0
-  - zlib=1.2.13=h5eee18b_0
+  #- _libgcc_mutex=0.1
+  #- _openmp_mutex=5.1
+  - ca-certificates=2023.08.22
+  #- ld_impl_linux-64=2.38
+  - libffi=3.4.4
+  #- libgcc-ng=11.2.0
+  #- libgomp=11.2.0
+  #- libstdcxx-ng=11.2.0
+  #- ncurses=6.4
+  - openssl=3.0.12
+  - pip=23.3
+  - python=3.8.18
+  #- readline=8.2
+  - setuptools=68.0.0
+  - sqlite=3.41.2
+  - tk=8.6.12
+  - wheel=0.41.2
+  - xz=5.4.2
+  - zlib=1.2.13
   - pip:
+      - torch==1.13.1
+      - torchaudio==0.13.1
+      - torchvision==0.14.1
       - absl-py==2.0.0
       - addict==2.4.0
       - aiosignal==1.3.1
@@ -124,9 +132,7 @@ dependencies:
       - thop==0.1.1-2209072238
       - threadpoolctl==3.2.0
       - tomli==2.0.1
-      - torch==1.13.1+cu116
-      - torchaudio==0.13.1+cu116
-      - torchvision==0.14.1+cu116
+
       - tqdm==4.66.1
       - trimesh==3.9.20
       - typing-extensions==4.8.0
@@ -136,3 +142,4 @@ dependencies:
       - werkzeug==3.0.1
       - yapf==0.40.2
       - zipp==3.17.0
+      - -i https://pypi.tuna.tsinghua.edu.cn/simple
